@@ -1,0 +1,2 @@
+select f.id_funcionario, f.nome, f.data_nascimento, f.data_admissao, f.data_demissao
+from funcionarios f where f.data_demissao != ''   order by  f.data_demissao
