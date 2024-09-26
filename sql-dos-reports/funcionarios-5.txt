@@ -1,0 +1,15 @@
+SELECT jaspercurso.empresas.razao_social,
+	jaspercurso.empresas.cnpj,
+	jaspercurso.empresas.telefone,
+	jaspercurso.empresas.email,
+	jaspercurso.funcionarios.id_funcionario,
+	jaspercurso.funcionarios.nome,
+	jaspercurso.enderecos.logradouro,
+	jaspercurso.enderecos.numero,
+	jaspercurso.enderecos.bairro,
+	jaspercurso.enderecos.cidade,
+	jaspercurso.enderecos.uf
+FROM jaspercurso.empresas,
+	jaspercurso.funcionarios
+	INNER JOIN jaspercurso.enderecos ON 
+	 jaspercurso.funcionarios.id_endereco = jaspercurso.enderecos.id_endereco
